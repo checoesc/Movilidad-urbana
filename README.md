@@ -1,34 +1,69 @@
 # Movilidad-urbana
 El proyecto analiza la relación entre movilidad urbana y productividad económica en ciudades de América Latina, usando datos del TomTom Traffic Index y OECD Cities. Integra, limpia y analiza indicadores de congestión y variables económicas para identificar ciudades donde invertir en transporte genera mayor impacto.
 
-1. Definición del problema y objetivo
+🚦 Movilidad Urbana y Productividad Económica en Ciudades Latinoamericanas
+📌 Descripción del proyecto
 
-Se establece la pregunta central del análisis: comprender cómo la movilidad urbana influye en la productividad económica de las ciudades latinoamericanas y en qué casos la inversión en infraestructura de transporte puede generar mayor impacto económico y social.
+Este repositorio analiza la relación entre la movilidad urbana y la productividad económica en ciudades latinoamericanas. El problema central que se aborda es cómo la congestión vehicular, los tiempos de traslado y la saturación vial pueden impactar negativamente en la eficiencia económica de una ciudad, medida principalmente a través del PIB per cápita y otros indicadores socioeconómicos.
 
-2. Recolección y carga de datos
+A partir de datos reales de movilidad y economía urbana, el proyecto busca identificar patrones, relaciones y niveles críticos que ayuden a priorizar inversiones en infraestructura de transporte, utilizando técnicas de análisis exploratorio, visualización de datos y modelos de árboles de decisión.
 
-Se utilizan datos reales de movilidad urbana provenientes del TomTom Traffic Index y datos socioeconómicos del OECD Cities, los cuales se cargan en el entorno de análisis para su exploración inicial.
+🎯 Objetivo
 
-3. Exploración inicial de los datos
+Evaluar cómo los indicadores de tráfico urbano se relacionan con variables de productividad económica, con el fin de:
 
-Se realiza un análisis exploratorio preliminar para entender la estructura de los datasets, identificar variables relevantes, detectar valores faltantes, inconsistencias y posibles problemas de calidad en los datos.
+Identificar ciudades con alto impacto negativo por congestión
 
-4. Limpieza y preparación de datos
+Detectar umbrales críticos de movilidad
 
-Se normalizan nombres de ciudades y países, se gestionan valores nulos y se seleccionan las variables clave relacionadas con congestión, tiempos de viaje, PIB per cápita, empleo y calidad ambiental, asegurando la comparabilidad entre fuentes.
+Apoyar la toma de decisiones basada en datos para inversión en transporte urbano
 
-5. Integración de fuentes de datos
+🗂️ Estructura del repositorio
+├── notebooks/
+│   └── Proyecto de movilidad urbana.ipynb
+├── data/
+│   └── (datasets de movilidad y economía)
+├── README.md
 
-Ambos datasets se combinan en una sola tabla unificada a nivel ciudad, permitiendo analizar de forma conjunta indicadores de movilidad y productividad económica.
+🔎 Metodología y pasos del análisis
+1️⃣ Carga y exploración inicial de datos
 
-6. Análisis exploratorio de datos (EDA)
+Se importan los datasets de movilidad urbana y productividad económica. Se revisa la estructura, tipos de variables y valores faltantes para comprender el alcance del análisis.
 
-Se aplican estadísticas descriptivas y visualizaciones para identificar patrones, correlaciones y niveles críticos donde la congestión del tráfico se asocia con una menor productividad económica.
+2️⃣ Limpieza y preparación de datos
 
-7. Identificación de insights y ciudades prioritarias
+Se eliminan duplicados, se manejan valores nulos y se ajustan formatos numéricos. Además, se estandarizan nombres de ciudades y países para permitir la correcta integración de fuentes.
 
-A partir de los resultados, se detectan ciudades con alto impacto negativo de la movilidad sobre la economía, señalando aquellas donde la inversión en infraestructura de transporte podría generar mayores beneficios.
+3️⃣ Integración de datasets
 
-8. Conclusiones y recomendaciones
+Los datos de tráfico y economía se combinan en una sola tabla analítica, permitiendo relacionar indicadores como congestión, tiempos de viaje y PIB per cápita por ciudad.
 
-Se sintetizan los hallazgos en conclusiones claras y se formulan recomendaciones orientadas a la toma de decisiones estratégicas en políticas públicas y planificación urbana.
+4️⃣ Análisis exploratorio (EDA)
+
+Se analizan distribuciones, correlaciones y tendencias mediante estadísticas descriptivas y visualizaciones. Esto permite detectar patrones iniciales entre movilidad y productividad.
+
+5️⃣ Modelado con árboles de decisión
+
+Se implementa un modelo de árbol de decisión para identificar qué variables de movilidad tienen mayor influencia sobre la productividad económica, facilitando la interpretación de resultados.
+
+6️⃣ Interpretación de resultados
+
+Se analizan los nodos del árbol y las reglas generadas para identificar niveles críticos de congestión y su impacto económico.
+
+🛠️ Tecnologías utilizadas
+
+Python
+
+Pandas
+
+NumPy
+
+Seaborn
+
+Matplotlib
+
+Scikit-learn
+
+📊 Resultado esperado
+
+Un análisis claro y accionable que muestre cómo la movilidad urbana influye en la productividad económica, proporcionando evidencia para decisiones estratégicas de inversión en infraestructura de transporte.
